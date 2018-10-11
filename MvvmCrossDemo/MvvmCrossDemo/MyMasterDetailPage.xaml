@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<d:MvxMasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmCrossDemo.MyMasterDetailPage"
+             xmlns:pages="clr-namespace:MvvmCrossDemo"
+             xmlns:local="clr-namespace:MvvmCrossDemo.ViewModels"
+             xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             x:TypeArguments="local:MasterDetailPageViewModel">
+  <MasterDetailPage.Master>
+    <pages:MyMasterDetailPageMaster x:Name="MasterPage" />
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+      <x:Arguments>
+        <pages:MyMasterDetailPageDetail />
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</d:MvxMasterDetailPage>
